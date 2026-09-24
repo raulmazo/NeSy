@@ -1,0 +1,51 @@
+% liberation_generic_op1.dzn 
+
+% Phase 1: Kherson–Zaporizhzhia axis 
+
+ 
+
+% Asset types 
+
+ASSET = {INF, ARMR, ARTY, UAV}; 
+
+ 
+
+% Offensive power per unit (OPU) 
+
+opu = [6.0, 10.0, 8.0, 40.0]; 
+
+ 
+
+% Resource types 
+
+RESOURCE = {Budget, Personnel}; 
+
+ 
+
+% Available capacity per resource 
+
+capacity = [10000000.0, 250000.0];  % Budget in USD thousands; Personnel 
+
+ 
+
+% Consumption matrix [ASSET x RESOURCE] 
+
+% Rows: INF, ARMR, ARTY, UAV 
+
+% Cols: Budget (USD), Personnel 
+
+consumption = [| 1300.0, 4000.0   % INF 
+
+               | 2100.0,  800.0   % ARMR 
+
+               | 1700.0,  300.0   % ARTY 
+
+               |10000.0,  120.0   % UAV 
+
+               |]; 
+
+ 
+
+% Maximum units available 
+
+max_units = [1000, 400, 500, 150]; 
