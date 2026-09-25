@@ -1,0 +1,57 @@
+% checkpoint.psm -- PRISM version 
+
+% Save as checkpoint.psm and load with: prism(checkpoint). 
+
+ 
+
+% ── Switch declarations ────────────────────────────────────── 
+
+% The possible outcomes of each random choice 
+
+values(vehicle,          [threat, safe]). 
+
+values(xray(threat),     [alarm, silent]). 
+
+values(xray(safe),       [alarm, silent]). 
+
+values(sniffer(threat),  [alarm, silent]). 
+
+values(sniffer(safe),    [alarm, silent]). 
+
+values(behavior(threat), [flag, no_flag]). 
+
+values(behavior(safe),   [flag, no_flag]). 
+
+ 
+
+% ── Main predicate: inspect a vehicle ─────────────────────── 
+
+% Draws a hidden vehicle type, then draws each sensor response 
+
+% conditional on that type. 
+
+inspect(Xray, Sniffer, Behavior) :- 
+
+    msw(vehicle,          0, Status), 
+
+    msw(xray(Status),     0, Xray), 
+
+    msw(sniffer(Status),  0, Sniffer), 
+
+    msw(behavior(Status), 0, Behavior). 
+
+ 
+
+% ── Alert logic ───────────────────────────────────────────── 
+
+alert(Xray, Sniffer, Behavior) :- 
+
+    inspect(Xray, Sniffer, Behavior), 
+
+    (   Xray = alarm,   Sniffer = alarm 
+
+    ;   Xray = alarm,   Behavior = flag 
+
+    ;   Sniffer = alarm, Behavior = flag 
+
+  ). 
