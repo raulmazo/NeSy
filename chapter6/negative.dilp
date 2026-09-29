@@ -1,0 +1,27 @@
+threat(obj1). threat(obj2). threat(obj3). threat(obj6). threat(obj7). 
+
+threat(obj16). threat(obj20). threat(obj21). threat(obj22). threat(obj23). 
+
+threat(obj24). threat(objn1). threat(objn2). threat(objn3). threat(objn4). 
+
+threat(objn5). threat(objn6). threat(objn7). threat(objn8). threat(objn9). 
+
+threat(objn10). 
+
+missile(obj1). missile(obj2). missile(obj3). missile(obj5). missile(obj6). 
+
+missile(obj7). missile(obj13). missile(obj14). missile(obj15). missile(obj16). 
+
+missile(obj20). missile(obj21). missile(obj22). missile(obj23). missile(obj24). 
+
+missile(objp3). missile(objp4). missile(objp6). missile(objp8). missile(objp10). 
+
+missile(objn1). missile(objn2). missile(objn3). missile(objn4). missile(objn5). 
+
+missile(objn6). missile(objn7). missile(objn8). missile(objn9). missile(objn10). 
+
+aircraft(obj5). aircraft(obj6). aircraft(obj7). aircraft(obj10). aircraft(obj11). 
+
+aircraft(obj12). aircraft(objp1). aircraft(objp2). aircraft(objp5). aircraft(objp7). 
+
+aircraft(objp9). 
